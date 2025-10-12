@@ -143,7 +143,7 @@ class TaskEval(abc.ABC):
     """Initializes the task."""
     # Reset the interaction cache so previous tasks don't affect this run:
     env.interaction_cache = ""
-    self.initialize_device_time(env)
+    # self.initialize_device_time(env)
     self._initialize_apps(env)
     logging.info("Initializing %s", self.name)
     if self.initialized:
