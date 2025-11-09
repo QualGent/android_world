@@ -1059,7 +1059,9 @@ def install_apk(
   """
   if not os.path.exists(apk_location):
     raise ValueError('APK does not exist.')
-  issue_generic_request(['install', apk_location], env, timeout_sec=30.0)
+  # Use bypass flag for SDK version issues (needed for cloud emulators and older APKs)
+  # Increased timeout for cloud emulators (network latency + large APK transfers)
+  issue_generic_request(['install', '--bypass-low-target-sdk-block', apk_location], env, timeout_sec=300.0)
 
 
 def check_airplane_mode(env: env_interface.AndroidEnvInterface) -> bool:

@@ -1,5 +1,6 @@
 absl-py==2.1.0
-android_env==1.2.3
+# android_env==1.2.3  # Using forked version
+-e file:///home/tameem/Tameem-Workplace/Qualgent-Repos/AppiumCUA/android_env#egg=android_env
 dm_env==1.6
 fuzzywuzzy==0.18.0
 google-generativeai

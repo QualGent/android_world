@@ -2,11 +2,11 @@
 *.pyc
 
 # Byte-compiled
-_pycache__/
+__pycache__/
 .cache/
 
 # Poetry, setuptools, PyPI distribution artifacts.
-/*.egg-info
+*.egg-info/
 .eggs/
 build/
 dist/
@@ -23,3 +23,13 @@ poetry.lock
 
 # PyCharm
 .idea
+
+# Generated protobuf files from setup.py
+**/*_pb2.py
+**/*_pb2_grpc.py
+**/*_pb2.pyi
+
+# Explicitly ignore proto generated files in task_evals
+android_world/task_evals/**/*_pb2.py
+android_world/task_evals/**/*_pb2_grpc.py
+android_world/task_evals/**/*_pb2.pyi
