@@ -49,7 +49,7 @@ _APPS = (
     apps.MarkorApp,
     apps.MiniWobApp,
     apps.OpenTracksApp,
-    apps.OsmAndApp,
+    # apps.OsmAndApp,
     apps.RecipeApp,
     apps.RetroMusicApp,
     apps.SettingsApp,
